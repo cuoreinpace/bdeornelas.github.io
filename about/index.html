@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chi Sono | Dr. Benjamin De Ornelas</title>
+  <title>Chi Sono | Dr. Benjamin De Ornelas - Cardiologo Milano</title>
 
   <!-- SEO -->
   <meta name="description" content="Chi sono: Dr. Benjamin De Ornelas, cardiologo a Milano, specializzato in Malattie dell'Apparato Cardiovascolare.">
-  <link rel="canonical" href="https://bdeornelas.github.io/about.html">
+  <link rel="canonical" href="https://bdeornelas.github.io/about/">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Chi Sono | Dr. Benjamin De Ornelas">
   <meta property="og:description" content="Cardiologo a Milano, specializzato in Malattie dell'Apparato Cardiovascolare. Scopri di più sulla mia formazione ed esperienza.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://bdeornelas.github.io/about.html">
+  <meta property="og:url" content="https://bdeornelas.github.io/about/">
   <meta property="og:image" content="https://bdeornelas.github.io/assets/img/og-card.jpg">
 
   <!-- Favicon -->
@@ -21,11 +21,23 @@
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { 50: '#f0f9ff', 100: '#e0f2fe', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1' },
+            secondary: { 50: '#ecfdf5', 100: '#d1fae5', 500: '#10b981', 600: '#059669' }
+          }
+        }
+      }
+    }
+  </script>
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Lucide Icons -->
   <script defer src="https://unpkg.com/lucide@latest"></script>
@@ -37,82 +49,218 @@
   <!-- CSS personalizzato -->
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-<body class="bg-slate-900 text-gray-200">
+<body class="bg-slate-50 text-slate-800">
 
-  <!-- DECORAZIONE SFONDO -->
-  <div class="absolute top-0 left-0 right-0 -z-10 h-screen w-full">
-    <div class="absolute inset-0 -z-10 h-full w-full bg-slate-900 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 -z-10 h-96 w-full max-w-4xl rounded-full bg-sky-500/20 blur-3xl pulse-glow-animation"></div>
-  </div>
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 header-glass">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-2 text-xl font-bold text-slate-800">
+          <span class="w-10 h-10 rounded-full bg-primary-600 flex items-center justify-center">
+            <i data-lucide="heart-pulse" class="w-5 h-5 text-white"></i>
+          </span>
+          Dr. De Ornelas
+        </a>
+        <ul class="hidden md:flex items-center space-x-1">
+          <li><a href="/" class="px-4 py-2 rounded-lg text-slate-600 hover:text-primary-600 hover:bg-primary-50 transition">Home</a></li>
+          <li><a href="/about/" class="px-4 py-2 rounded-lg bg-primary-100 text-primary-700 font-medium">Chi Sono</a></li>
+          <li><a href="/#servizi" class="px-4 py-2 rounded-lg text-slate-600 hover:text-primary-600 hover:bg-primary-50 transition">Servizi</a></li>
+          <li><a href="/research/" class="px-4 py-2 rounded-lg text-slate-600 hover:text-primary-600 hover:bg-primary-50 transition">Ricerca</a></li>
+          <li><a href="/contact/" class="ml-2 btn-primary">Prenota Visita</a></li>
+        </ul>
+        <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-slate-100">
+          <i data-lucide="menu" class="w-6 h-6 text-slate-700"></i>
+        </button>
+      </nav>
+    </div>
+    <!-- MENU MOBILE -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white">
+      <ul class="container mx-auto px-4 py-4 space-y-2">
+        <li><a href="/" class="block py-2 px-3 rounded-lg hover:bg-primary-50 text-slate-700">Home</a></li>
+        <li><a href="/about/" class="block py-2 px-3 rounded-lg bg-primary-50 text-primary-700">Chi Sono</a></li>
+        <li><a href="/#servizi" class="block py-2 px-3 rounded-lg hover:bg-primary-50 text-slate-700">Servizi</a></li>
+        <li><a href="/research/" class="block py-2 px-3 rounded-lg hover:bg-primary-50 text-slate-700">Ricerca</a></li>
+        <li><a href="/contact/" class="block py-2 px-3 rounded-lg bg-primary-600 text-white text-center">Prenota Visita</a></li>
+      </ul>
+    </div>
+  </header>
 
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-
-    <!-- HEADER -->
-    <header class="sticky top-0 z-50 py-4 transition-all duration-300">
-      <div class="glass-card rounded-xl px-4 py-2">
-        <nav class="flex items-center justify-between">
-          <a href="/index.html" class="text-2xl font-bold tracking-tighter text-white flex items-center gap-2">
-            <i data-lucide="heart-pulse" class="text-sky-400"></i>
-            Dr. Benjamin De Ornelas
-          </a>
-          <ul class="hidden md:flex items-center space-x-1">
-            <li><a href="/index.html#home" class="px-3 py-2 rounded-md hover:bg-slate-700/50">Home</a></li>
-            <li><a href="/index.html#articoli" class="px-3 py-2 rounded-md hover:bg-slate-700/50">Articoli</a></li>
-            <li><a href="/about.html" class="px-3 py-2 rounded-md bg-sky-600 text-white">Chi Sono</a></li>
-            <li><a href="/index.html#ricerca" class="px-3 py-2 rounded-md hover:bg-slate-700/50">Ricerca</a></li>
-            <li><a href="/index.html#contatti" class="ml-4 bg-sky-500 hover:bg-sky-600 text-white font-medium py-2 px-4 rounded-lg">Contatti</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-      <!-- CHI SONO -->
-      <section class="my-20 py-16">
-        <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12 px-8 md:px-16">
+  <main>
+    <!-- HERO CHI SONO -->
+    <section class="hero-section py-16 lg:py-24">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
           <!-- Foto -->
-          <div class="relative w-40 h-40 md:w-64 md:h-64 flex-shrink-0">
-            <div class="absolute -inset-3 md:-inset-4 rounded-full bg-gradient-to-tr from-sky-500 to-violet-500 blur-lg opacity-70"></div>
-            <img
-              src="/assets/img/benjamin-de-ornelas-portrait.jpg?v=2"
-              alt="Dr. Benjamin De Ornelas, cardiologo a Milano"
-              class="relative w-full h-full rounded-full object-cover object-[center_30%] border-4 border-sky-500 shadow-xl"
-            />
+          <div class="relative order-2 lg:order-1" data-aos="fade-right">
+            <div class="profile-photo w-64 h-64 md:w-80 md:h-80 mx-auto">
+              <img
+                src="/assets/img/logo-bdo.png?v=2"
+                alt="Dr. Benjamin De Ornelas"
+                class="w-full h-full object-cover object-[center_30%]"
+              />
+            </div>
+            <!-- Decorazioni -->
+            <div class="absolute -top-4 -left-4 w-48 h-48 bg-primary-100 rounded-full blur-2xl opacity-60 -z-10"></div>
+            <div class="absolute -bottom-4 -right-4 w-32 h-32 bg-secondary-100 rounded-full blur-xl opacity-60 -z-10"></div>
           </div>
 
           <!-- Testo -->
-          <div class="text-center md:text-left max-w-2xl">
-            <h1 class="text-4xl font-extrabold mb-4">Chi Sono</h1>
-            <p class="text-slate-400 leading-relaxed mb-4">
-              Sono il <strong>Dr. Benjamin De Ornelas</strong>, medico chirurgo specializzato in Malattie dell'Apparato Cardiovascolare.
-              Mi occupo di prevenzione, diagnosi e trattamento delle patologie cardiache, con un approccio che unisce competenza clinica ed empatia.
+          <div class="order-1 lg:order-2" data-aos="fade-left">
+            <span class="badge badge-blue mb-4">Chi Sono</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">
+              Dr. Benjamin De Ornelas
+            </h1>
+            <p class="text-lg text-primary-600 font-medium mb-4">
+              Medico Chirurgo - Specialista in Malattie Cardiovascolari
             </p>
-            <p class="text-slate-400 leading-relaxed mb-4">
-              Ho maturato esperienza in ambito di <em>cardiologia interventistica</em>, <em>ecocardiografia avanzata</em> e
-              <em>medicina preventiva</em>. Il mio obiettivo è accompagnare ogni paziente in un percorso di cura personalizzato,
-              con attenzione particolare alla prevenzione primaria e secondaria.
+            <div class="divider"></div>
+            <p class="text-slate-600 mb-4 leading-relaxed">
+              Sono un cardiologo con una profonda passione per la prevenzione e la cura delle malattie cardiovascolari.
+              La mia missione è offrire un'assistenza personalizzata, basata sulle evidenze scientifiche e su un
+              rapporto di fiducia con ogni paziente.
             </p>
-            <p class="text-slate-400 leading-relaxed">
-              Oltre all’attività clinica, mi dedico alla <strong>ricerca</strong> e alla divulgazione scientifica, per contribuire
-              all’avanzamento della cardiologia e alla diffusione di informazioni affidabili per la salute del cuore.
+            <p class="text-slate-600 mb-6 leading-relaxed">
+              Mi occupo di diagnosi, trattamento e prevenzione delle patologie cardiache, con un approccio
+              che unisce competenza clinica, tecnologie avanzate ed empatia.
             </p>
+            <a href="/contact/" class="btn-primary">
+              <i data-lucide="calendar" class="w-5 h-5"></i>
+              Prenota una Visita
+            </a>
           </div>
         </div>
-      </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="text-center py-10 border-t border-slate-800">
-      <h3 class="text-2xl font-bold mb-4">Contattami</h3>
-      <p class="text-slate-400 mb-6 max-w-md mx-auto">Ricevo a Milano. Per visite o informazioni contattami.</p>
-      <div class="flex items-center justify-center space-x-6 mb-8">
-        <a href="mailto:info@deornelas.it" class="text-slate-500 hover:text-white"><i data-lucide="mail" class="w-6 h-6"></i></a>
-        <a href="#" class="text-slate-500 hover:text-white"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
-        <a href="tel:+39123456789" class="text-slate-500 hover:text-white"><i data-lucide="phone" class="w-6 h-6"></i></a>
       </div>
-      <p class="text-sm text-slate-500">&copy; 2025 Dr. Benjamin De Ornelas. Tutti i diritti riservati.</p>
-    </footer>
-  </div>
+    </section>
+
+    <!-- FORMAZIONE E COMPETENZE -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16" data-aos="fade-up">
+          <span class="badge badge-green mb-4">Formazione</span>
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Percorso Professionale</h2>
+          <div class="divider mx-auto"></div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <!-- Formazione -->
+          <div class="card card-accent-blue p-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-circle icon-circle-blue mb-4">
+              <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-4">Formazione Accademica</h3>
+            <ul class="space-y-3 text-slate-600">
+              <li class="flex items-start gap-3">
+                <i data-lucide="check-circle" class="w-5 h-5 text-primary-500 mt-0.5 flex-shrink-0"></i>
+                <span>Laurea in Medicina e Chirurgia</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check-circle" class="w-5 h-5 text-primary-500 mt-0.5 flex-shrink-0"></i>
+                <span>Specializzazione in Malattie dell'Apparato Cardiovascolare</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check-circle" class="w-5 h-5 text-primary-500 mt-0.5 flex-shrink-0"></i>
+                <span>Formazione avanzata in Ecocardiografia</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Competenze -->
+          <div class="card card-accent-green p-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-circle icon-circle-green mb-4">
+              <i data-lucide="award" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-900 mb-4">Aree di Competenza</h3>
+            <ul class="space-y-3 text-slate-600">
+              <li class="flex items-start gap-3">
+                <i data-lucide="check-circle" class="w-5 h-5 text-secondary-500 mt-0.5 flex-shrink-0"></i>
+                <span>Cardiologia clinica e interventistica</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check-circle" class="w-5 h-5 text-secondary-500 mt-0.5 flex-shrink-0"></i>
+                <span>Ecocardiografia avanzata (TTE, TEE)</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check-circle" class="w-5 h-5 text-secondary-500 mt-0.5 flex-shrink-0"></i>
+                <span>Prevenzione cardiovascolare primaria e secondaria</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPROCCIO -->
+    <section class="py-20 bg-slate-50">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-12" data-aos="fade-up">
+            <span class="badge badge-blue mb-4">Filosofia</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Il Mio Approccio</h2>
+            <div class="divider mx-auto"></div>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="text-center p-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon-circle icon-circle-blue mx-auto mb-4">
+                <i data-lucide="user-check" class="w-6 h-6"></i>
+              </div>
+              <h3 class="font-bold text-slate-900 mb-2">Ascolto</h3>
+              <p class="text-slate-600 text-sm">Ogni paziente merita tempo e attenzione per comprendere a fondo la sua situazione.</p>
+            </div>
+
+            <div class="text-center p-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon-circle icon-circle-green mx-auto mb-4">
+                <i data-lucide="microscope" class="w-6 h-6"></i>
+              </div>
+              <h3 class="font-bold text-slate-900 mb-2">Evidenze</h3>
+              <p class="text-slate-600 text-sm">Decisioni cliniche basate sulle più recenti evidenze scientifiche e linee guida.</p>
+            </div>
+
+            <div class="text-center p-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon-circle icon-circle-blue mx-auto mb-4">
+                <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+              </div>
+              <h3 class="font-bold text-slate-900 mb-2">Empatia</h3>
+              <p class="text-slate-600 text-sm">Un rapporto di fiducia e rispetto reciproco per un percorso di cura condiviso.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section-cta py-16">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="zoom-in">
+        <h2 class="text-3xl font-bold mb-4">Hai bisogno di una consulenza?</h2>
+        <p class="text-white/80 max-w-xl mx-auto mb-8">
+          Sono a disposizione per visite cardiologiche e consulenze specialistiche. Contattami per prenotare un appuntamento.
+        </p>
+        <a href="/contact/" class="inline-flex items-center gap-2 bg-white text-primary-700 font-bold py-3 px-8 rounded-lg hover:bg-slate-100 transition shadow-lg">
+          <i data-lucide="mail" class="w-5 h-5"></i>
+          Contattami
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer py-12">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-2">
+          <span class="w-10 h-10 rounded-full bg-primary-600 flex items-center justify-center">
+            <i data-lucide="heart-pulse" class="w-5 h-5 text-white"></i>
+          </span>
+          <span class="text-xl font-bold text-white">Dr. De Ornelas</span>
+        </div>
+        <p class="text-sm text-slate-500">&copy; 2025 Dr. Benjamin De Ornelas. Tutti i diritti riservati.</p>
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-slate-500 hover:text-white transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+          <a href="mailto:info@deornelas.it" class="text-slate-500 hover:text-white transition"><i data-lucide="mail" class="w-5 h-5"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <!-- JS -->
   <script defer src="/assets/js/main.js"></script>

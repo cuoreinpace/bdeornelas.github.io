@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Approfondimenti medico-scientifici | Dr. Benjamin De Ornelas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ricerca e Pubblicazioni | Dr. Benjamin De Ornelas</title>
 
   <!-- SEO -->
-  <meta name="description" content="Analisi, riflessioni e contenuti scientifici per esperti e curiosi.">
+  <meta name="description" content="Approfondimenti medico-scientifici, ricerca clinica e pubblicazioni del Dr. Benjamin De Ornelas, cardiologo a Milano.">
   <link rel="canonical" href="https://bdeornelas.github.io/research/">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Approfondimenti medico-scientifici  | Dr. Benjamin De Ornelas">
+  <meta property="og:title" content="Ricerca e Pubblicazioni | Dr. Benjamin De Ornelas">
   <meta property="og:description" content="Analisi, riflessioni e contenuti scientifici per esperti e curiosi.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bdeornelas.github.io/research/">
@@ -19,133 +19,212 @@
   <!-- Favicon -->
   <link rel="icon" href="/assets/img/favicon.svg">
 
-  <!-- Stili & librerie -->
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { 50: '#f0f9ff', 100: '#e0f2fe', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1' },
+            secondary: { 50: '#ecfdf5', 100: '#d1fae5', 500: '#10b981', 600: '#059669' }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
   <script defer src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- CSS personalizzato -->
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-<body class="bg-slate-900 text-gray-200">
+<body class="bg-slate-50 text-slate-800">
 
-  <!-- SFONDO -->
-  <div class="absolute top-0 left-0 right-0 -z-10 h-screen w-full">
-    <div class="absolute inset-0 -z-10 h-full w-full bg-slate-900 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 -z-10 h-96 w-full max-w-4xl rounded-full bg-violet-500/20 blur-3xl"></div>
-  </div>
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 header-glass">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-2 text-xl font-bold text-slate-800">
+          <span class="w-10 h-10 rounded-full bg-primary-600 flex items-center justify-center">
+            <i data-lucide="heart-pulse" class="w-5 h-5 text-white"></i>
+          </span>
+          Dr. De Ornelas
+        </a>
+        <ul class="hidden md:flex items-center space-x-1">
+          <li><a href="/" class="px-4 py-2 rounded-lg text-slate-600 hover:text-primary-600 hover:bg-primary-50 transition">Home</a></li>
+          <li><a href="/about/" class="px-4 py-2 rounded-lg text-slate-600 hover:text-primary-600 hover:bg-primary-50 transition">Chi Sono</a></li>
+          <li><a href="/#servizi" class="px-4 py-2 rounded-lg text-slate-600 hover:text-primary-600 hover:bg-primary-50 transition">Servizi</a></li>
+          <li><a href="/research/" class="px-4 py-2 rounded-lg bg-primary-100 text-primary-700 font-medium">Ricerca</a></li>
+          <li><a href="/contact/" class="ml-2 btn-primary">Prenota Visita</a></li>
+        </ul>
+        <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-slate-100">
+          <i data-lucide="menu" class="w-6 h-6 text-slate-700"></i>
+        </button>
+      </nav>
+    </div>
+    <!-- MENU MOBILE -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white">
+      <ul class="container mx-auto px-4 py-4 space-y-2">
+        <li><a href="/" class="block py-2 px-3 rounded-lg hover:bg-primary-50 text-slate-700">Home</a></li>
+        <li><a href="/about/" class="block py-2 px-3 rounded-lg hover:bg-primary-50 text-slate-700">Chi Sono</a></li>
+        <li><a href="/#servizi" class="block py-2 px-3 rounded-lg hover:bg-primary-50 text-slate-700">Servizi</a></li>
+        <li><a href="/research/" class="block py-2 px-3 rounded-lg bg-primary-50 text-primary-700">Ricerca</a></li>
+        <li><a href="/contact/" class="block py-2 px-3 rounded-lg bg-primary-600 text-white text-center">Prenota Visita</a></li>
+      </ul>
+    </div>
+  </header>
 
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+  <main>
+    <!-- HERO -->
+    <section class="hero-section py-16">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="badge badge-blue mb-4" data-aos="fade-up">Ricerca</span>
+        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <span class="gradient-text">Approfondimenti</span> Medico-Scientifici
+        </h1>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+          Analisi, riflessioni e contenuti scientifici per professionisti e appassionati di cardiologia.
+        </p>
+      </div>
+    </section>
 
-    <!-- HEADER -->
-    <header class="sticky top-0 z-50 py-4">
-      <div class="glass-card rounded-xl px-4 py-2">
-        <nav class="flex items-center justify-between">
-          <a href="/" class="text-2xl font-bold tracking-tighter text-white flex items-center gap-2">
-            <i data-lucide="heart-pulse" class="text-sky-400"></i>
-            Dr. Benjamin De Ornelas
+    <!-- LISTA PUBBLICAZIONI -->
+    <section class="py-12">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto space-y-6">
+
+          <!-- ARTICOLO 1 -->
+          <a href="/research/meccanica-fatica-aterogenesi.html" class="card p-6 flex items-start gap-4 group" data-aos="fade-up">
+            <div class="icon-circle icon-circle-blue flex-shrink-0 group-hover:scale-110 transition">
+              <i data-lucide="plane" class="w-5 h-5"></i>
+            </div>
+            <div class="flex-1">
+              <div class="flex flex-wrap items-center gap-2 mb-2">
+                <span class="badge badge-blue text-xs">Biomeccanica</span>
+                <span class="badge badge-green text-xs">Aterosclerosi</span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 group-hover:text-primary-600 transition mb-2">
+                Meccanica della fatica vascolare e aterogenesi coronarica
+              </h3>
+              <p class="text-slate-600 text-sm mb-3">
+                Dalle cabine degli aerei ai vasi coronarici: modello quantitativo di fatica ciclica, stress/strain, waterhammer e vincoli anatomici.
+              </p>
+              <div class="flex flex-wrap items-center gap-4 text-xs text-slate-500">
+                <span class="flex items-center gap-1">
+                  <i data-lucide="calendar" class="w-3 h-3"></i>
+                  24 settembre 2025
+                </span>
+                <span class="flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3 h-3"></i>
+                  25-30 min lettura
+                </span>
+              </div>
+            </div>
+            <i data-lucide="chevron-right" class="w-5 h-5 text-slate-400 group-hover:text-primary-600 transition flex-shrink-0 mt-2"></i>
           </a>
-          <ul class="hidden md:flex items-center space-x-1">
-            <li><a href="/" class="px-3 py-2 rounded-md hover:bg-slate-700/50">Home</a></li>
-            <li><a href="/articles/" class="px-3 py-2 rounded-md hover:bg-slate-700/50">Articoli</a></li>
-            <li><a href="/about/" class="px-3 py-2 rounded-md hover:bg-slate-700/50">Chi Sono</a></li>
-            <li><a href="/research/" class="px-3 py-2 rounded-md bg-sky-600 text-white">Ricerca</a></li>
-            <li><a href="/contact/" class="ml-4 bg-sky-500 hover:bg-sky-600 text-white font-medium py-2 px-4 rounded-lg">Contatti</a></li>
-          </ul>
+
+          <!-- ARTICOLO 2 -->
+          <a href="/research/flusso-diastolico-lvot.html" class="card p-6 flex items-start gap-4 group" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-circle icon-circle-green flex-shrink-0 group-hover:scale-110 transition">
+              <i data-lucide="activity" class="w-5 h-5"></i>
+            </div>
+            <div class="flex-1">
+              <div class="flex flex-wrap items-center gap-2 mb-2">
+                <span class="badge badge-blue text-xs">Ecocardiografia</span>
+                <span class="badge badge-green text-xs">Diagnosi</span>
+              </div>
+              <h3 class="text-xl font-bold text-slate-900 group-hover:text-primary-600 transition mb-2">
+                Flusso Diastolico nel LVOT: Fisiologia o Patologia?
+              </h3>
+              <p class="text-slate-600 text-sm mb-3">
+                Guida alla diagnosi differenziale del flusso da rilasciamento isovolumetrico (IVRF).
+              </p>
+              <div class="flex flex-wrap items-center gap-4 text-xs text-slate-500">
+                <span class="flex items-center gap-1">
+                  <i data-lucide="calendar" class="w-3 h-3"></i>
+                  22 settembre 2025
+                </span>
+                <span class="flex items-center gap-1">
+                  <i data-lucide="clock" class="w-3 h-3"></i>
+                  3-4 min lettura
+                </span>
+              </div>
+            </div>
+            <i data-lucide="chevron-right" class="w-5 h-5 text-slate-400 group-hover:text-primary-600 transition flex-shrink-0 mt-2"></i>
+          </a>
+
+        </div>
+
+        <!-- PAGINAZIONE -->
+        <nav class="flex items-center justify-center gap-2 mt-12" data-aos="fade-up">
+          <a href="#" class="w-10 h-10 rounded-lg border border-slate-300 flex items-center justify-center text-slate-500 hover:border-primary-500 hover:text-primary-600 transition">
+            <i data-lucide="chevron-left" class="w-4 h-4"></i>
+          </a>
+          <span class="w-10 h-10 rounded-lg bg-primary-600 text-white flex items-center justify-center font-medium">1</span>
+          <a href="#" class="w-10 h-10 rounded-lg border border-slate-300 flex items-center justify-center text-slate-600 hover:border-primary-500 hover:text-primary-600 transition">2</a>
+          <a href="#" class="w-10 h-10 rounded-lg border border-slate-300 flex items-center justify-center text-slate-600 hover:border-primary-500 hover:text-primary-600 transition">3</a>
+          <a href="#" class="w-10 h-10 rounded-lg border border-slate-300 flex items-center justify-center text-slate-500 hover:border-primary-500 hover:text-primary-600 transition">
+            <i data-lucide="chevron-right" class="w-4 h-4"></i>
+          </a>
         </nav>
       </div>
-    </header>
+    </section>
 
-    <main class="py-16">
-      <!-- INTRO -->
-      <section class="text-center mb-12">
-        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tighter gradient-text mb-4">Approfondimenti medico-scientifici</h1>
-        <p class="max-w-2xl mx-auto text-slate-400">Analisi, riflessioni e contenuti scientifici per esperti e curiosi.</p>
-      </section>
+    <!-- CTA -->
+    <section class="section-cta py-16">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="zoom-in">
+        <h2 class="text-3xl font-bold mb-4">Hai domande sulla ricerca?</h2>
+        <p class="text-white/80 max-w-xl mx-auto mb-8">
+          Per collaborazioni scientifiche o informazioni sulle pubblicazioni, non esitare a contattarmi.
+        </p>
+        <a href="/contact/" class="inline-flex items-center gap-2 bg-white text-primary-700 font-bold py-3 px-8 rounded-lg hover:bg-slate-100 transition shadow-lg">
+          <i data-lucide="mail" class="w-5 h-5"></i>
+          Contattami
+        </a>
+      </div>
+    </section>
+  </main>
 
-      <!-- LISTA PUBBLICAZIONI -->
-      <section class="max-w-4xl mx-auto">
-        <ul class="space-y-4">
-          
-          <!-- ARTICOLO FATICA VASCOLARE -->
-          <li>
-            <a href="/research/meccanica-fatica-aterogenesi.html" class="block px-6 py-4 rounded-lg glass-card border-l-4 border-sky-400 hover:border-sky-300 hover:bg-slate-800/50 transition group">
-              <div class="flex items-center gap-3">
-                <i data-lucide="plane" class="w-5 h-5 text-sky-400 group-hover:text-sky-300"></i>
-                <div>
-                  <h3 class="font-bold text-white group-hover:text-sky-100">Meccanica della fatica vascolare e aterogenesi coronarica</h3>
-                  <p class="text-sm text-slate-400 mt-1">Dalle cabine degli aerei ai vasi coronarici: modello quantitativo di fatica ciclica, stress/strain, waterhammer e vincoli anatomici</p>
-                  <div class="flex items-center gap-4 mt-2 text-xs text-slate-500">
-                    <span class="flex items-center gap-1">
-                      <i data-lucide="calendar" class="w-3 h-3"></i>
-                      24 settembre 2025
-                    </span>
-                    <span class="flex items-center gap-1">
-                      <i data-lucide="clock" class="w-3 h-3"></i>
-                      25-30 min lettura
-                    </span>
-                    <span class="flex items-center gap-1">
-                      <i data-lucide="tag" class="w-3 h-3"></i>
-                      Biomeccanica, Aterosclerosi, Myocardial Bridge
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </li>
+  <!-- FOOTER -->
+  <footer class="footer py-12">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-2">
+          <span class="w-10 h-10 rounded-full bg-primary-600 flex items-center justify-center">
+            <i data-lucide="heart-pulse" class="w-5 h-5 text-white"></i>
+          </span>
+          <span class="text-xl font-bold text-white">Dr. De Ornelas</span>
+        </div>
+        <p class="text-sm text-slate-500">&copy; 2025 Dr. Benjamin De Ornelas. Tutti i diritti riservati.</p>
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-slate-500 hover:text-white transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+          <a href="mailto:info@deornelas.it" class="text-slate-500 hover:text-white transition"><i data-lucide="mail" class="w-5 h-5"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-          <!-- ARTICOLO IVRF -->
-          <li>
-            <a href="/research/flusso-diastolico-lvot.html" class="block px-6 py-4 rounded-lg glass-card border-l-4 border-violet-400 hover:border-violet-300 hover:bg-slate-800/50 transition group">
-              <div class="flex items-center gap-3">
-                <i data-lucide="activity" class="w-5 h-5 text-violet-400 group-hover:text-violet-300"></i>
-                <div>
-                  <h3 class="font-bold text-white group-hover:text-sky-100">Flusso Diastolico nel LVOT: Fisiologia o Patologia?</h3>
-                  <p class="text-sm text-slate-400 mt-1">Guida alla diagnosi differenziale del flusso da rilasciamento isovolumetrico (IVRF)</p>
-                  <div class="flex items-center gap-4 mt-2 text-xs text-slate-500">
-                    <span class="flex items-center gap-1">
-                      <i data-lucide="calendar" class="w-3 h-3"></i>
-                      22 settembre 2025
-                    </span>
-                    <span class="flex items-center gap-1">
-                      <i data-lucide="clock" class="w-3 h-3"></i>
-                      3-4 min lettura
-                    </span>
-                    <span class="flex items-center gap-1">
-                      <i data-lucide="tag" class="w-3 h-3"></i>
-                      Ecocardiografia, IVRF, Diagnosi Differenziale
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </li>
-        </ul>
-      </section>
-
-      <!-- PAGINAZIONE -->
-      <nav class="flex items-center justify-center gap-2 mt-12">
-        <a class="px-3 py-2 rounded-lg glass-card hover:bg-slate-800/70" href="#">«</a>
-        <span class="px-3 py-2 rounded-lg bg-sky-600 text-white">1</span>
-        <a class="px-3 py-2 rounded-lg glass-card hover:bg-slate-800/70" href="#">2</a>
-        <a class="px-3 py-2 rounded-lg glass-card hover:bg-slate-800/70" href="#">3</a>
-        <a class="px-3 py-2 rounded-lg glass-card hover:bg-slate-800/70" href="#">»</a>
-      </nav>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="text-center py-10 border-t border-slate-800 mt-16">
-      <h3 class="text-xl font-bold mb-2">Contatti</h3>
-      <p class="text-slate-400 mb-4">Per collaborazioni o informazioni sulle pubblicazioni.</p>
-      <a href="/contact/" class="bg-sky-500 hover:bg-sky-600 text-white font-medium py-2 px-5 rounded-lg">Contattami</a>
-      <p class="text-sm text-slate-500 mt-6">&copy; 2025 Dr. Benjamin De Ornelas. Tutti i diritti riservati.</p>
-    </footer>
-  </div>
-
+  <!-- JS -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       if (window.lucide) lucide.createIcons();
       if (window.AOS) AOS.init({ duration: 700, once: true, offset: 50 });
+
+      // Mobile menu toggle
+      const btn = document.getElementById('mobile-menu-button');
+      const menu = document.getElementById('mobile-menu');
+      if (btn && menu) btn.addEventListener('click', () => menu.classList.toggle('hidden'));
     });
   </script>
 </body>

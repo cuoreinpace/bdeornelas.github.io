@@ -1,187 +1,303 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contatti | Dr. Benjamin De Ornelas</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contatti | Dr. Benjamin De Ornelas - Cardiologo Milano</title>
 
-  <!-- Stile e librerie come nel resto del sito -->
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <!-- SEO -->
+  <meta name="description" content="Contatta il Dr. Benjamin De Ornelas, cardiologo a Milano. Prenota una visita cardiologica o richiedi informazioni.">
+  <link rel="canonical" href="https://bdeornelas.github.io/contact/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contatti | Dr. Benjamin De Ornelas">
+  <meta property="og:description" content="Contatta il Dr. Benjamin De Ornelas, cardiologo a Milano. Prenota una visita cardiologica.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bdeornelas.github.io/contact/">
+  <meta property="og:image" content="https://bdeornelas.github.io/assets/img/og-card.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/assets/img/favicon.svg">
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: { 50: '#f0f9ff', 100: '#e0f2fe', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1' },
+            secondary: { 50: '#ecfdf5', 100: '#d1fae5', 500: '#10b981', 600: '#059669' }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons -->
   <script defer src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- CSS personalizzato -->
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-<body class="bg-slate-900 text-gray-200">
+<body class="bg-slate-50 text-slate-800">
 
-  <!-- Sfondo decorativo coerente -->
-  <div class="absolute top-0 left-0 right-0 -z-10 h-screen w-full">
-    <div class="absolute inset-0 -z-10 h-full w-full bg-slate-900 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 -z-10 h-96 w-full max-w-4xl rounded-full bg-sky-500/20 blur-3xl pulse-glow-animation"></div>
-  </div>
-
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- HEADER (uguale alla home) -->
-    <header class="sticky top-0 z-50 py-4">
-      <div class="glass-card rounded-xl px-4 py-2">
-        <nav class="flex items-center justify-between">
-          <a href="/" class="text-2xl font-bold tracking-tighter text-white flex items-center gap-2">
-            <i data-lucide="heart-pulse" class="text-sky-400"></i>
-            Dr. Benjamin De Ornelas
-          </a>
-          <ul class="hidden md:flex items-center space-x-1">
-            <li><a href="/#home" class="px-3 py-2 rounded-md hover:bg-slate-700/50">Home</a></li>
-            <li><a href="/#articoli" class="px-3 py-2 rounded-md hover:bg-slate-700/50">Articoli</a></li>
-            <li><a href="/about/" class="px-3 py-2 rounded-md hover:bg-slate-700/50">Chi Sono</a></li>
-            <li><a href="/research/" class="px-3 py-2 rounded-md hover:bg-slate-700/50">Ricerca</a></li>
-            <li><a href="/contact/" class="ml-4 bg-sky-600 text-white font-medium py-2 px-4 rounded-lg">Contatti</a></li>
-          </ul>
-          <button id="mobile-menu-button" class="md:hidden p-2 rounded-md hover:bg-slate-800">
-            <i data-lucide="menu" class="w-6 h-6"></i>
-          </button>
-        </nav>
-      </div>
-      <div id="mobile-menu" class="hidden md:hidden mt-2 glass-card rounded-xl p-2">
-        <ul class="flex flex-col space-y-2">
-          <li><a href="/#home" class="block py-2 px-3 rounded-md hover:bg-slate-800/80">Home</a></li>
-          <li><a href="/#articoli" class="block py-2 px-3 rounded-md hover:bg-slate-800/80">Articoli</a></li>
-          <li><a href="/about/" class="block py-2 px-3 rounded-md hover:bg-slate-800/80">Chi Sono</a></li>
-          <li><a href="/research/" class="block py-2 px-3 rounded-md hover:bg-slate-800/80">Ricerca</a></li>
-          <li><a href="/contact/" class="block py-2 px-3 rounded-md bg-sky-500/50 hover:bg-sky-500/70">Contatti</a></li>
+  <!-- HEADER -->
+  <header class="sticky top-0 z-50 header-glass">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <nav class="flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-2 text-xl font-bold text-slate-800">
+          <span class="w-10 h-10 rounded-full bg-primary-600 flex items-center justify-center">
+            <i data-lucide="heart-pulse" class="w-5 h-5 text-white"></i>
+          </span>
+          Dr. De Ornelas
+        </a>
+        <ul class="hidden md:flex items-center space-x-1">
+          <li><a href="/" class="px-4 py-2 rounded-lg text-slate-600 hover:text-primary-600 hover:bg-primary-50 transition">Home</a></li>
+          <li><a href="/about/" class="px-4 py-2 rounded-lg text-slate-600 hover:text-primary-600 hover:bg-primary-50 transition">Chi Sono</a></li>
+          <li><a href="/#servizi" class="px-4 py-2 rounded-lg text-slate-600 hover:text-primary-600 hover:bg-primary-50 transition">Servizi</a></li>
+          <li><a href="/research/" class="px-4 py-2 rounded-lg text-slate-600 hover:text-primary-600 hover:bg-primary-50 transition">Ricerca</a></li>
+          <li><a href="/contact/" class="ml-2 btn-primary bg-primary-700">Prenota Visita</a></li>
         </ul>
-      </div>
-    </header>
+        <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-slate-100">
+          <i data-lucide="menu" class="w-6 h-6 text-slate-700"></i>
+        </button>
+      </nav>
+    </div>
+    <!-- MENU MOBILE -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-200 bg-white">
+      <ul class="container mx-auto px-4 py-4 space-y-2">
+        <li><a href="/" class="block py-2 px-3 rounded-lg hover:bg-primary-50 text-slate-700">Home</a></li>
+        <li><a href="/about/" class="block py-2 px-3 rounded-lg hover:bg-primary-50 text-slate-700">Chi Sono</a></li>
+        <li><a href="/#servizi" class="block py-2 px-3 rounded-lg hover:bg-primary-50 text-slate-700">Servizi</a></li>
+        <li><a href="/research/" class="block py-2 px-3 rounded-lg hover:bg-primary-50 text-slate-700">Ricerca</a></li>
+        <li><a href="/contact/" class="block py-2 px-3 rounded-lg bg-primary-600 text-white text-center">Prenota Visita</a></li>
+      </ul>
+    </div>
+  </header>
 
-    <main>
-      <!-- Hero/intro -->
-      <section class="text-center py-20">
-        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tighter mb-4" data-aos="fade-up">
-          Mettiti in contatto
+  <main>
+    <!-- HERO CONTATTI -->
+    <section class="hero-section py-16">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="badge badge-blue mb-4" data-aos="fade-up">Contatti</span>
+        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4" data-aos="fade-up" data-aos-delay="100">
+          Mettiti in Contatto
         </h1>
-        <p class="max-w-2xl mx-auto text-slate-400" data-aos="fade-up" data-aos-delay="150">
-          Sono a disposizione per visite, consulenze e collaborazioni. Scegli il canale che preferisci
-          oppure inviami un messaggio tramite il form.
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="200">
+          Sono a disposizione per visite, consulenze e collaborazioni. Scegli il canale che preferisci o inviami un messaggio.
         </p>
-      </section>
+      </div>
+    </section>
 
-      <!-- Cards canali di contatto -->
-      <section class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8" aria-label="Metodi di contatto">
-        <a href="mailto:info@deornelas.it" class="glass-card rounded-xl p-6 hover:border-sky-400/50 hover:shadow-2xl hover:shadow-sky-500/10 transition" data-aos="fade-up">
-          <i data-lucide="mail" class="w-10 h-10 mx-auto mb-4 text-sky-400"></i>
-          <h3 class="text-xl font-semibold mb-1 text-center">Email</h3>
-          <p class="text-slate-400 text-center">info@deornelas.it</p>
-        </a>
-        <a href="tel:+39123456789" class="glass-card rounded-xl p-6 hover:border-green-400/50 hover:shadow-2xl hover:shadow-green-500/10 transition" data-aos="fade-up" data-aos-delay="75">
-          <i data-lucide="phone" class="w-10 h-10 mx-auto mb-4 text-green-400"></i>
-          <h3 class="text-xl font-semibold mb-1 text-center">Telefono</h3>
-          <p class="text-slate-400 text-center">+39 123 456 789</p>
-        </a>
-        <a href="https://linkedin.com/in/tuo-profilo" target="_blank" rel="noopener" class="glass-card rounded-xl p-6 hover:border-blue-400/50 hover:shadow-2xl hover:shadow-blue-500/10 transition" data-aos="fade-up" data-aos-delay="150">
-          <i data-lucide="linkedin" class="w-10 h-10 mx-auto mb-4 text-blue-400"></i>
-          <h3 class="text-xl font-semibold mb-1 text-center">LinkedIn</h3>
-          <p class="text-slate-400 text-center">Seguimi o scrivimi su LinkedIn</p>
-        </a>
-      </section>
-
-      <!-- Form + info studio -->
-      <section class="mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <!-- Form contatti -->
-        <div class="glass-card rounded-2xl p-6 md:p-8" data-aos="fade-right">
-          <h2 class="text-2xl font-bold mb-4">Invia un messaggio</h2>
-          <p class="text-slate-400 mb-6">Ti risponderò appena possibile. I campi contrassegnati con * sono obbligatori.</p>
-
-          <!-- Sostituisci l'action con il tuo endpoint Formspree -->
-          <form action="https://formspree.io/f/xxxxx" method="POST" class="space-y-4" id="contact-form">
-            <div>
-              <label for="name" class="block text-sm mb-1">Nome e Cognome *</label>
-              <input id="name" name="name" type="text" required
-                     class="w-full rounded-lg bg-slate-800/60 border border-slate-700 px-3 py-2 outline-none focus:ring-2 focus:ring-sky-500">
+    <!-- CARDS CONTATTO -->
+    <section class="py-12">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <!-- Email -->
+          <a href="mailto:info@deornelas.it" class="card p-6 text-center hover:border-primary-300 group" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon-circle icon-circle-blue mx-auto mb-4 group-hover:scale-110 transition">
+              <i data-lucide="mail" class="w-6 h-6"></i>
             </div>
+            <h3 class="font-bold text-slate-900 mb-1">Email</h3>
+            <p class="text-slate-600 text-sm">info@deornelas.it</p>
+          </a>
 
-            <div>
-              <label for="email" class="block text-sm mb-1">Email *</label>
-              <input id="email" name="_replyto" type="email" required
-                     class="w-full rounded-lg bg-slate-800/60 border border-slate-700 px-3 py-2 outline-none focus:ring-2 focus:ring-sky-500">
+          <!-- Telefono -->
+          <a href="tel:+39123456789" class="card p-6 text-center hover:border-secondary-300 group" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon-circle icon-circle-green mx-auto mb-4 group-hover:scale-110 transition">
+              <i data-lucide="phone" class="w-6 h-6"></i>
             </div>
+            <h3 class="font-bold text-slate-900 mb-1">Telefono</h3>
+            <p class="text-slate-600 text-sm">+39 123 456 789</p>
+          </a>
 
-            <div>
-              <label for="subject" class="block text-sm mb-1">Oggetto</label>
-              <input id="subject" name="subject" type="text"
-                     class="w-full rounded-lg bg-slate-800/60 border border-slate-700 px-3 py-2 outline-none focus:ring-2 focus:ring-sky-500">
+          <!-- LinkedIn -->
+          <a href="https://linkedin.com/in/tuo-profilo" target="_blank" rel="noopener" class="card p-6 text-center hover:border-primary-300 group" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon-circle icon-circle-blue mx-auto mb-4 group-hover:scale-110 transition">
+              <i data-lucide="linkedin" class="w-6 h-6"></i>
             </div>
-
-            <div>
-              <label for="message" class="block text-sm mb-1">Messaggio *</label>
-              <textarea id="message" name="message" required rows="5"
-                        class="w-full rounded-lg bg-slate-800/60 border border-slate-700 px-3 py-2 outline-none focus:ring-2 focus:ring-sky-500"></textarea>
-            </div>
-
-            <!-- Honeypot anti-spam -->
-            <input type="text" name="_gotcha" class="hidden" aria-hidden="true">
-
-            <button type="submit"
-                    class="w-full bg-sky-500 hover:bg-sky-600 text-white font-medium py-2.5 rounded-lg transition">
-              Invia
-            </button>
-
-            <!-- Messaggio di successo -->
-            <p id="form-success" class="hidden text-green-400 text-sm mt-2">
-              Messaggio inviato! Ti risponderò al più presto.
-            </p>
-          </form>
+            <h3 class="font-bold text-slate-900 mb-1">LinkedIn</h3>
+            <p class="text-slate-600 text-sm">Seguimi su LinkedIn</p>
+          </a>
         </div>
+      </div>
+    </section>
 
-        <!-- Info studio + orari -->
-        <aside class="space-y-6" data-aos="fade-left">
-          <div class="glass-card rounded-2xl p-6 md:p-8">
-            <h2 class="text-2xl font-bold mb-4">Studio medico</h2>
-            <p class="text-slate-300 mb-3">Milano — ricevo su appuntamento.</p>
-            <ul class="text-slate-400 space-y-2">
-              <li class="flex items-start gap-3"><i data-lucide="map-pin" class="w-5 h-5 text-sky-400 mt-0.5"></i> Via Esempio 123, 20100 Milano</li>
-              <li class="flex items-start gap-3"><i data-lucide="phone" class="w-5 h-5 text-green-400 mt-0.5"></i> +39 123 456 789</li>
-              <li class="flex items-start gap-3"><i data-lucide="mail" class="w-5 h-5 text-sky-400 mt-0.5"></i> info@deornelas.it</li>
-            </ul>
+    <!-- FORM + INFO -->
+    <section class="py-12 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          <!-- Form -->
+          <div class="card p-8" data-aos="fade-right">
+            <h2 class="text-2xl font-bold text-slate-900 mb-2">Invia un Messaggio</h2>
+            <p class="text-slate-600 mb-6">Ti risponderò appena possibile. I campi con * sono obbligatori.</p>
 
-            <h3 class="font-semibold mt-6 mb-2">Orari</h3>
-            <ul class="text-slate-400 grid grid-cols-2 gap-x-6">
-              <li>Lun–Ven: 9:00–18:00</li>
-              <li>Sab: 9:00–13:00</li>
-            </ul>
+            <form action="https://formspree.io/f/xxxxx" method="POST" class="space-y-5" id="contact-form">
+              <div>
+                <label for="name" class="block text-sm font-medium text-slate-700 mb-1">Nome e Cognome *</label>
+                <input
+                  id="name" name="name" type="text" required
+                  class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition"
+                  placeholder="Mario Rossi"
+                />
+              </div>
+
+              <div>
+                <label for="email" class="block text-sm font-medium text-slate-700 mb-1">Email *</label>
+                <input
+                  id="email" name="_replyto" type="email" required
+                  class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition"
+                  placeholder="mario.rossi@email.com"
+                />
+              </div>
+
+              <div>
+                <label for="phone" class="block text-sm font-medium text-slate-700 mb-1">Telefono</label>
+                <input
+                  id="phone" name="phone" type="tel"
+                  class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition"
+                  placeholder="+39 333 123 4567"
+                />
+              </div>
+
+              <div>
+                <label for="subject" class="block text-sm font-medium text-slate-700 mb-1">Oggetto</label>
+                <input
+                  id="subject" name="subject" type="text"
+                  class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition"
+                  placeholder="Richiesta informazioni visita"
+                />
+              </div>
+
+              <div>
+                <label for="message" class="block text-sm font-medium text-slate-700 mb-1">Messaggio *</label>
+                <textarea
+                  id="message" name="message" required rows="5"
+                  class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 outline-none transition resize-none"
+                  placeholder="Scrivi il tuo messaggio..."
+                ></textarea>
+              </div>
+
+              <!-- Honeypot anti-spam -->
+              <input type="text" name="_gotcha" class="hidden" aria-hidden="true">
+
+              <button type="submit" class="w-full btn-primary justify-center py-3">
+                <i data-lucide="send" class="w-5 h-5"></i>
+                Invia Messaggio
+              </button>
+
+              <!-- Messaggio di successo -->
+              <p id="form-success" class="hidden text-secondary-600 text-sm text-center mt-2 font-medium">
+                Messaggio inviato con successo! Ti risponderemo al più presto.
+              </p>
+            </form>
           </div>
 
-          <!-- Mappa -->
-          <div class="glass-card rounded-2xl overflow-hidden">
-            <div class="aspect-video">
-              <!-- Sostituisci l'URL embed con quello del tuo indirizzo -->
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.000000!2d9.1900!3d45.4642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sMilano!5e0!3m2!1sit!2sit!4v0000000000000"
-                width="100%" height="100%" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
+          <!-- Info Studio -->
+          <div class="space-y-6" data-aos="fade-left">
+            <!-- Card Info -->
+            <div class="card p-8">
+              <h2 class="text-2xl font-bold text-slate-900 mb-4">Studio Medico</h2>
+              <p class="text-slate-600 mb-6">Ricevo su appuntamento a Milano.</p>
+
+              <ul class="space-y-4">
+                <li class="flex items-start gap-4">
+                  <div class="icon-circle icon-circle-blue flex-shrink-0">
+                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <p class="font-medium text-slate-900">Indirizzo</p>
+                    <p class="text-slate-600">Via Esempio 123, 20100 Milano</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-4">
+                  <div class="icon-circle icon-circle-green flex-shrink-0">
+                    <i data-lucide="phone" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <p class="font-medium text-slate-900">Telefono</p>
+                    <p class="text-slate-600">+39 123 456 789</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-4">
+                  <div class="icon-circle icon-circle-blue flex-shrink-0">
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <p class="font-medium text-slate-900">Email</p>
+                    <p class="text-slate-600">info@deornelas.it</p>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="mt-6 pt-6 border-t border-slate-200">
+                <h3 class="font-bold text-slate-900 mb-3">Orari di Ricevimento</h3>
+                <div class="grid grid-cols-2 gap-2 text-sm">
+                  <p class="text-slate-600">Lunedì - Venerdì:</p>
+                  <p class="text-slate-900 font-medium">9:00 - 18:00</p>
+                  <p class="text-slate-600">Sabato:</p>
+                  <p class="text-slate-900 font-medium">9:00 - 13:00</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mappa -->
+            <div class="card overflow-hidden">
+              <div class="aspect-video">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2797.000000!2d9.1900!3d45.4642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sMilano!5e0!3m2!1sit!2sit!4v0000000000000"
+                  width="100%" height="100%" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                  class="w-full h-full"
+                ></iframe>
+              </div>
             </div>
           </div>
-        </aside>
-      </section>
-    </main>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <!-- FOOTER minimal -->
-    <footer class="text-center py-10 border-t border-slate-800 mt-16">
-      <p class="text-sm text-slate-500">&copy; 2025 Dr. Benjamin De Ornelas. Tutti i diritti riservati.</p>
-    </footer>
-  </div>
+  <!-- FOOTER -->
+  <footer class="footer py-12">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-2">
+          <span class="w-10 h-10 rounded-full bg-primary-600 flex items-center justify-center">
+            <i data-lucide="heart-pulse" class="w-5 h-5 text-white"></i>
+          </span>
+          <span class="text-xl font-bold text-white">Dr. De Ornelas</span>
+        </div>
+        <p class="text-sm text-slate-500">&copy; 2025 Dr. Benjamin De Ornelas. Tutti i diritti riservati.</p>
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-slate-500 hover:text-white transition"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+          <a href="mailto:info@deornelas.it" class="text-slate-500 hover:text-white transition"><i data-lucide="mail" class="w-5 h-5"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-  <!-- Script minimi -->
+  <!-- JS -->
   <script>
-    // Lucide + AOS + menu mobile + feedback form
     document.addEventListener('DOMContentLoaded', () => {
       if (window.lucide) lucide.createIcons();
       if (window.AOS) AOS.init({ duration: 700, once: true, offset: 50 });
 
+      // Mobile menu toggle
       const btn = document.getElementById('mobile-menu-button');
       const menu = document.getElementById('mobile-menu');
       if (btn && menu) btn.addEventListener('click', () => menu.classList.toggle('hidden'));
 
-      // Messaggio di successo (solo se usi Formspree che redirige con ?success=1)
+      // Form success message
       const params = new URLSearchParams(window.location.search);
       if (params.get('success') === '1') {
         const ok = document.getElementById('form-success');
