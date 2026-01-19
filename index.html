@@ -3,88 +3,80 @@ layout: default
 ---
 
 <main>
-      <!-- HERO - Stile MioDottore con Badge e Layout a 2 Colonne -->
-      <section id="home" class="py-16 lg:py-24">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <!-- HERO FOTOGRAFICO - Split Screen con Foto Prominente -->
+      <section id="home" class="hero-split">
 
-          <!-- Colonna Sinistra: Testo e Badge -->
-          <div data-aos="fade-right">
-            <!-- Badge Specializzazione -->
-            <div class="flex flex-wrap gap-2 mb-6">
-              <span class="badge badge-blue">
-                <i data-lucide="heart-pulse" class="w-3 h-3"></i>
-                Cardiologo Specialista
-              </span>
-              <span class="badge badge-green">
-                <i data-lucide="map-pin" class="w-3 h-3"></i>
-                Milano
-              </span>
-            </div>
+        <!-- FOTO - Lato Sinistro (55%) -->
+        <div class="hero-photo-container" data-aos="fade-right" data-aos-duration="800">
+          <div class="hero-photo-card">
+            <img
+              src="/assets/img/logo-bdo.png?v=3"
+              alt="Dr. Benjamin De Ornelas, cardiologo specialista a Milano, presso il Centro Medico Santagostino"
+              class="hero-photo"
+              loading="eager"
+            />
+          </div>
+        </div>
 
-            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
-              <span class="gradient-text">Salute del Cuore, Cura e Prevenzione.</span>
-            </h1>
-            <p class="text-lg md:text-xl mb-8 leading-relaxed">
-              Medico Chirurgo Specialista in Malattie dell'Apparato Cardiovascolare. Benvenuti nel mio sito informativo, uno spazio dedicato alla salute del cuore.
-            </p>
+        <!-- CONTENUTO - Lato Destro (45%) -->
+        <div class="hero-content-container" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
 
-            <!-- CTA Buttons -->
-            <div class="flex flex-wrap gap-4">
-              <a href="https://www.santagostino.it/it/prenota" target="_blank" rel="noopener"
-                 class="btn-primary btn-glow">
-                <i data-lucide="calendar-check" class="w-5 h-5"></i>
-                Prenota Visita
-              </a>
-              <a href="#chi-sono" class="btn-secondary">
-                <i data-lucide="user" class="w-5 h-5"></i>
-                Chi Sono
-              </a>
-            </div>
+          <!-- Badge Specializzazione -->
+          <div class="flex flex-wrap gap-2 mb-6" data-aos="fade-up" data-aos-delay="400">
+            <span class="badge badge-blue badge-hero">
+              <i data-lucide="heart-pulse" class="w-3 h-3"></i>
+              Cardiologo Specialista
+            </span>
+            <span class="badge badge-green badge-hero">
+              <i data-lucide="map-pin" class="w-3 h-3"></i>
+              Milano
+            </span>
           </div>
 
-          <!-- Colonna Destra: Info Card -->
-          <div data-aos="fade-left" data-aos-delay="200">
-            <div class="glass-card p-8 rounded-2xl">
-              <div class="flex items-center gap-3 mb-6">
-                <div class="icon-circle icon-circle-blue">
-                  <i data-lucide="stethoscope" class="w-6 h-6"></i>
-                </div>
-                <h3 class="text-2xl font-bold">Servizi Disponibili</h3>
-              </div>
+          <!-- Titolo Principale -->
+          <h1 class="hero-title" data-aos="fade-up" data-aos-delay="500">
+            <span class="gradient-text">Salute del Cuore, Cura e Prevenzione.</span>
+          </h1>
 
-              <ul class="space-y-4">
-                <li class="flex items-start gap-3">
-                  <div class="icon-circle icon-circle-blue" style="width: 2rem; height: 2rem;">
-                    <i data-lucide="check" class="w-4 h-4"></i>
-                  </div>
-                  <div>
-                    <p class="font-semibold">Visite Cardiologiche</p>
-                    <p class="text-sm">8 sedi a Milano e hinterland</p>
-                  </div>
-                </li>
-                <li class="flex items-start gap-3">
-                  <div class="icon-circle icon-circle-blue" style="width: 2rem; height: 2rem;">
-                    <i data-lucide="check" class="w-4 h-4"></i>
-                  </div>
-                  <div>
-                    <p class="font-semibold">Ecocardiogramma</p>
-                    <p class="text-sm">Color Doppler TTE e TSA</p>
-                  </div>
-                </li>
-                <li class="flex items-start gap-3">
-                  <div class="icon-circle icon-circle-green" style="width: 2rem; height: 2rem;">
-                    <i data-lucide="check" class="w-4 h-4"></i>
-                  </div>
-                  <div>
-                    <p class="font-semibold">Consulti Online</p>
-                    <p class="text-sm">Telemedicina e refertazione ECG</p>
-                  </div>
-                </li>
-              </ul>
+          <!-- Sottotitolo -->
+          <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="600">
+            Medico Chirurgo Specialista in Malattie dell'Apparato Cardiovascolare. Benvenuti nel mio sito informativo, uno spazio dedicato alla salute del cuore.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-wrap gap-4 mb-6" data-aos="fade-up" data-aos-delay="700">
+            <a href="https://www.santagostino.it/it/prenota" target="_blank" rel="noopener"
+               class="btn-primary-hero">
+              <i data-lucide="calendar-check" class="w-5 h-5"></i>
+              Prenota Visita
+            </a>
+            <a href="#chi-sono" class="btn-secondary-hero">
+              <i data-lucide="user" class="w-5 h-5"></i>
+              Chi Sono
+            </a>
+          </div>
+
+          <!-- Mini-Card Servizi Veloci -->
+          <div class="hero-services-mini" data-aos="fade-up" data-aos-delay="800">
+            <p class="text-sm font-semibold text-slate-700 mb-3">Servizi Disponibili</p>
+            <div class="flex flex-wrap gap-4 text-sm text-slate-600">
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-sky-600"></i>
+                <span>Visite Cardiologiche</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-sky-600"></i>
+                <span>Ecocardiogramma</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-4 h-4 text-emerald-600"></i>
+                <span>Consulti Online</span>
+              </div>
             </div>
           </div>
 
         </div>
+
       </section>
 
       <!-- ARTICOLI - Sfondo Alternato Grigio Chiaro -->
@@ -125,77 +117,77 @@ layout: default
         </div>
       </section>
 
-      <!-- CHI SONO - Layout Affiancato Professionale -->
+      <!-- CHI SONO - Versione Compatta (Foto ora nell'hero) -->
       <section id="chi-sono" class="py-20">
-        <div class="glass-card rounded-2xl overflow-hidden" data-aos="fade-up">
-          <div class="grid grid-cols-1 md:grid-cols-5 gap-0">
+        <div class="max-w-4xl mx-auto">
+          <div class="glass-card rounded-2xl p-8 md:p-12" data-aos="fade-up">
 
-            <!-- Colonna Foto (2/5) -->
-            <div class="md:col-span-2 bg-gradient-to-br from-blue-50 to-green-50 p-12 flex items-center justify-center">
-              <div class="relative">
-                <div class="w-48 h-48 md:w-64 md:h-64">
-                  <img
-                    src="/assets/img/logo-bdo.png?v=2"
-                    alt="Dr. Benjamin De Ornelas, cardiologo a Milano"
-                    class="w-full h-full rounded-full object-cover object-[center_30%] border-4 border-white shadow-2xl"
-                  />
-                </div>
-                <!-- Badge Verificato -->
-                <div class="absolute -bottom-2 left-1/2 transform -translate-x-1/2 badge badge-blue shadow-lg">
-                  <i data-lucide="check-circle" class="w-4 h-4"></i>
-                  Specialista Verificato
-                </div>
+            <!-- Header con Badge -->
+            <div class="flex flex-wrap items-center gap-3 mb-6">
+              <div class="icon-circle icon-circle-blue">
+                <i data-lucide="user-check" class="w-6 h-6"></i>
               </div>
-            </div>
-
-            <!-- Colonna Info (3/5) -->
-            <div class="md:col-span-3 p-8 md:p-12">
-              <div class="flex items-center gap-2 mb-4">
+              <div>
                 <h2 class="text-3xl md:text-4xl font-bold">Dr. Benjamin De Ornelas</h2>
+                <p class="text-slate-600">Medico Chirurgo Specialista in Cardiologia</p>
               </div>
-
-              <div class="flex flex-wrap gap-2 mb-6">
-                <span class="badge badge-blue">
-                  <i data-lucide="graduation-cap" class="w-3 h-3"></i>
-                  Medico Chirurgo
-                </span>
-                <span class="badge badge-green">
-                  <i data-lucide="heart" class="w-3 h-3"></i>
-                  Cardiologo
-                </span>
-              </div>
-
-              <p class="text-lg leading-relaxed mb-6">
-                Specializzato in Malattie dell'Apparato Cardiovascolare. La mia missione è offrire cure personalizzate e prevenzione mirata.
-              </p>
-
-              <!-- Lista Competenze -->
-              <div class="space-y-3 mb-8">
-                <div class="flex items-center gap-3">
-                  <div class="icon-circle icon-circle-blue" style="width: 2.5rem; height: 2.5rem;">
-                    <i data-lucide="check" class="w-4 h-4"></i>
-                  </div>
-                  <span class="font-medium">Visite cardiologiche complete</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <div class="icon-circle icon-circle-blue" style="width: 2.5rem; height: 2.5rem;">
-                    <i data-lucide="check" class="w-4 h-4"></i>
-                  </div>
-                  <span class="font-medium">Ecocardiogramma e diagnostica avanzata</span>
-                </div>
-                <div class="flex items-center gap-3">
-                  <div class="icon-circle icon-circle-green" style="width: 2.5rem; height: 2.5rem;">
-                    <i data-lucide="check" class="w-4 h-4"></i>
-                  </div>
-                  <span class="font-medium">Prevenzione cardiovascolare</span>
-                </div>
-              </div>
-
-              <a href="/about/" class="btn-primary">
-                <i data-lucide="user" class="w-5 h-5"></i>
-                Scopri di più
-              </a>
             </div>
+
+            <div class="flex flex-wrap gap-2 mb-6">
+              <span class="badge badge-blue">
+                <i data-lucide="graduation-cap" class="w-3 h-3"></i>
+                Medico Chirurgo
+              </span>
+              <span class="badge badge-green">
+                <i data-lucide="heart" class="w-3 h-3"></i>
+                Cardiologo
+              </span>
+              <span class="badge badge-blue">
+                <i data-lucide="check-circle" class="w-3 h-3"></i>
+                Specialista Verificato
+              </span>
+            </div>
+
+            <!-- Descrizione -->
+            <p class="text-lg leading-relaxed mb-8 text-slate-700">
+              Specializzato in Malattie dell'Apparato Cardiovascolare. La mia missione è offrire cure personalizzate e prevenzione mirata, combinando esperienza clinica e approccio umano per la salute del tuo cuore.
+            </p>
+
+            <!-- Lista Competenze -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+              <div class="flex items-start gap-3">
+                <div class="icon-circle icon-circle-blue" style="width: 2.5rem; height: 2.5rem;">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <p class="font-semibold text-slate-800">Visite Cardiologiche</p>
+                  <p class="text-sm text-slate-600">Valutazione completa</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="icon-circle icon-circle-blue" style="width: 2.5rem; height: 2.5rem;">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <p class="font-semibold text-slate-800">Diagnostica Avanzata</p>
+                  <p class="text-sm text-slate-600">Ecocardiogramma e ECG</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <div class="icon-circle icon-circle-green" style="width: 2.5rem; height: 2.5rem;">
+                  <i data-lucide="check" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <p class="font-semibold text-slate-800">Prevenzione</p>
+                  <p class="text-sm text-slate-600">Cardiovascolare mirata</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="/about/" class="btn-primary">
+              <i data-lucide="user" class="w-5 h-5"></i>
+              Scopri di più
+            </a>
 
           </div>
         </div>
@@ -219,30 +211,30 @@ layout: default
             <div class="p-8">
               <div class="flex items-center gap-3 mb-4">
                 <div class="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 border border-emerald-400/30">
-                  <i data-lucide="stethoscope" class="w-6 h-6 text-emerald-400"></i>
+                  <i data-lucide="stethoscope" class="w-6 h-6 text-emerald-600"></i>
                 </div>
-                <h3 class="text-2xl font-bold text-white">Visite a Milano</h3>
+                <h3 class="text-2xl font-bold text-slate-800">Visite a Milano</h3>
               </div>
 
-              <p class="text-slate-300 mb-6 leading-relaxed">
-                Ricevo presso il <strong class="text-white">Centro Medico Santagostino</strong> in 8 sedi a Milano e hinterland.
+              <p class="text-slate-700 mb-6 leading-relaxed">
+                Ricevo presso il <strong class="text-slate-900">Centro Medico Santagostino</strong> in 8 sedi a Milano e hinterland.
               </p>
 
               <div class="space-y-2 mb-6 text-sm">
-                <div class="flex items-start gap-2 text-slate-300">
-                  <i data-lucide="check" class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0"></i>
+                <div class="flex items-start gap-2 text-slate-700">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0"></i>
                   <span>Visite cardiologiche complete</span>
                 </div>
-                <div class="flex items-start gap-2 text-slate-300">
-                  <i data-lucide="check" class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0"></i>
+                <div class="flex items-start gap-2 text-slate-700">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0"></i>
                   <span>Ecocardiogramma color Doppler (TTE) ed ecocolor Doppler TSA</span>
                 </div>
-                <div class="flex items-start gap-2 text-slate-300">
-                  <i data-lucide="check" class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0"></i>
+                <div class="flex items-start gap-2 text-slate-700">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0"></i>
                   <span>ECG a 12 derivazioni e test ergometrico</span>
                 </div>
-                <div class="flex items-start gap-2 text-slate-300">
-                  <i data-lucide="check" class="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0"></i>
+                <div class="flex items-start gap-2 text-slate-700">
+                  <i data-lucide="check" class="w-4 h-4 text-emerald-600 mt-0.5 flex-shrink-0"></i>
                   <span>Videoconsulti</span>
                 </div>
               </div>
@@ -260,30 +252,30 @@ layout: default
             <div class="p-8">
               <div class="flex items-center gap-3 mb-4">
                 <div class="flex items-center justify-center w-12 h-12 rounded-full bg-violet-500/20 border border-violet-400/30">
-                  <i data-lucide="smartphone" class="w-6 h-6 text-violet-400"></i>
+                  <i data-lucide="smartphone" class="w-6 h-6 text-violet-600"></i>
                 </div>
-                <h3 class="text-2xl font-bold text-white">Consulti Online</h3>
+                <h3 class="text-2xl font-bold text-slate-800">Consulti Online</h3>
               </div>
 
-              <p class="text-slate-300 mb-6 leading-relaxed">
-                <strong class="text-white">CuoreInPace</strong>: servizio di telemedicina per refertazione ECG da smartwatch.
+              <p class="text-slate-700 mb-6 leading-relaxed">
+                <strong class="text-slate-900">CuoreInPace</strong>: servizio di telemedicina per refertazione ECG da smartwatch.
               </p>
 
               <div class="space-y-2 mb-6 text-sm">
-                <div class="flex items-start gap-2 text-slate-300">
-                  <i data-lucide="check" class="w-4 h-4 text-violet-400 mt-0.5 flex-shrink-0"></i>
+                <div class="flex items-start gap-2 text-slate-700">
+                  <i data-lucide="check" class="w-4 h-4 text-violet-600 mt-0.5 flex-shrink-0"></i>
                   <span>Analisi ECG da Apple Watch, Samsung Galaxy Watch</span>
                 </div>
-                <div class="flex items-start gap-2 text-slate-300">
-                  <i data-lucide="check" class="w-4 h-4 text-violet-400 mt-0.5 flex-shrink-0"></i>
+                <div class="flex items-start gap-2 text-slate-700">
+                  <i data-lucide="check" class="w-4 h-4 text-violet-600 mt-0.5 flex-shrink-0"></i>
                   <span>Referto ECG in breve tempo</span>
                 </div>
-                <div class="flex items-start gap-2 text-slate-300">
-                  <i data-lucide="check" class="w-4 h-4 text-violet-400 mt-0.5 flex-shrink-0"></i>
+                <div class="flex items-start gap-2 text-slate-700">
+                  <i data-lucide="check" class="w-4 h-4 text-violet-600 mt-0.5 flex-shrink-0"></i>
                   <span>Nessun appuntamento necessario</span>
                 </div>
-                <div class="flex items-start gap-2 text-slate-300">
-                  <i data-lucide="check" class="w-4 h-4 text-violet-400 mt-0.5 flex-shrink-0"></i>
+                <div class="flex items-start gap-2 text-slate-700">
+                  <i data-lucide="check" class="w-4 h-4 text-violet-600 mt-0.5 flex-shrink-0"></i>
                   <span>Tariffa fissa €14.90</span>
                 </div>
               </div>
