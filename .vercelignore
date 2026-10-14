@@ -42,3 +42,6 @@ venv/
 
 # Config files with credentials
 config.json
+
+# Archived homepage must not be published
+index-old-backup.html

@@ -18,7 +18,7 @@ pagination:
   sort_reverse: true
 ---
 
-    <main>
+    <div>
       <!-- Hero -->
       <section class="text-center py-16 md:py-20">
         <h1 class="text-4xl md:text-5xl font-extrabold tracking-tighter mb-4 gradient-text" data-aos="fade-up">
@@ -109,7 +109,7 @@ pagination:
                     {% if a.date %}
                     <span class="flex items-center gap-1">
                       <i data-lucide="calendar" class="w-3 h-3"></i>
-                      {{ a.date | date: '%-d %B %Y' }}
+                      {% include date-it.html date=a.date %}
                     </span>
                     {% endif %}
                   </div>
@@ -160,4 +160,4 @@ pagination:
         {% endif %}
 
           
-<!-- Trigger deploy -->
+    </div>

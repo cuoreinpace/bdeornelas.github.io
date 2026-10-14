@@ -46,6 +46,21 @@
   ],
   "redirects": [
     {
+      "source": "/index-old-backup.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/index-old-backup",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/index-old-backup/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/articles/:slug",
       "destination": "/articles/:slug/",
       "permanent": true
