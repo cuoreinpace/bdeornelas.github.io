@@ -12,6 +12,7 @@ plugins:
 
 # Exclude from processing
 exclude:
+  - index-old-backup.html
   - Gemfile
   - Gemfile.lock
   - vendor/

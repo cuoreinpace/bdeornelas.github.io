@@ -70,7 +70,7 @@
     <!-- Bottom bar -->
     <div class="border-t pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm" style="border-color: var(--border-teal); color: var(--text-secondary);">
       <p>
-        © 2025 Dr. Benjamin De Ornelas. Tutti i diritti riservati.
+        © {{ site.time | date: "%Y" }} Dr. Benjamin De Ornelas. Tutti i diritti riservati.
       </p>
       <div class="flex gap-6">
         <a href="{{ '/privacy/' | relative_url }}" class="hover-accent transition">Privacy Policy</a>

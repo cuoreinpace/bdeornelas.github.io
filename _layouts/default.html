@@ -9,18 +9,21 @@
   <meta name="description" content="{{ page.description | default: 'Cardiologo a Milano: visite, ecocardiogramma color Doppler (TTE), test ergometrico e prevenzione cardiovascolare. Dr. Benjamin De Ornelas.' }}">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
+  {% assign social_image = page.og_image | default: "/assets/img/og-card.jpg" | absolute_url %}
+  {% assign twitter_image = page.twitter_image | default: page.og_image | default: "/assets/img/og-card.jpg" | absolute_url %}
+
   <!-- Open Graph -->
   <meta property="og:title" content="{{ page.og_title | default: page.title | default: 'Dr. Benjamin De Ornelas | Cardiologo a Milano' }}">
   <meta property="og:description" content="{{ page.og_description | default: page.description | default: 'Cardiologo a Milano: visite, ecocardiogramma color Doppler (TTE), test ergometrico e prevenzione. Prenota una visita e prenditi cura del tuo cuore.' }}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
-  <meta property="og:image" content="{{ page.og_image | default: site.url | append: '/assets/img/og-card.jpg' }}">
+  <meta property="og:image" content="{{ social_image }}">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ page.twitter_title | default: page.title | default: 'Dr. Benjamin De Ornelas | Cardiologo a Milano' }}">
   <meta name="twitter:description" content="{{ page.twitter_description | default: page.description | default: 'Cardiologo a Milano: visite, ecocardiogramma color Doppler (TTE), test ergometrico e prevenzione cardiovascolare.' }}">
-  <meta name="twitter:image" content="{{ page.twitter_image | default: site.url | append: '/assets/img/og-card.jpg' }}">
+  <meta name="twitter:image" content="{{ twitter_image }}">
 
   <!-- Schema.org structured data -->
   <script type="application/ld+json">
@@ -174,7 +177,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Lucide Icons -->
-  <script defer src="https://unpkg.com/lucide@latest"></script>
+  <script defer src="/assets/js/lucide.min.js"></script>
 
   <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
